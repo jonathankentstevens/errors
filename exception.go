@@ -40,7 +40,6 @@ func New(s string) Exception {
 	return &Exception{Msg: s, File: file, Package: pkg, Method: method, Line: line, Ip: ip, Host: hostname, Date: time.Now()}
 }
 
-
 //Error returns a formatted string displaying the file where the error was thrown, the package it was
 //thrown in, the method, line and, of course, the error message
 func (err Exception) Error() string {
