@@ -37,7 +37,7 @@ func New(s string) Exception {
 	pkg := pathArgs[0]
 	method := pathArgs[1]
 
-	return &Exception{Msg: s, File: file, Package: pkg, Method: method, Line: line, Ip: ip, Host: hostname, Date: time.Now()}
+	return Exception{Msg: s, File: file, Package: pkg, Method: method, Line: line, Ip: ip, Host: hostname, Date: time.Now()}
 }
 
 //Error returns a formatted string displaying the file where the error was thrown, the package it was
