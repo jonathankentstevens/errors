@@ -42,12 +42,13 @@ func New(s string) Exception {
 
 //Error returns a formatted string displaying the file where the error was thrown, the package it was
 //thrown in, the method, line and, of course, the error message
-func (err Exception) Error() string {
-	return fmt.Sprintf("%s - %s.%s(%d): %s", err.File, err.Package, err.Method, err.Line, err.Msg)
+func (e Exception) Error() string {
+	args := strings.Split(e.File, "/")
+	return fmt.Sprintf("%s.%s [%s:%d] - %s", e.Package, e.Method, args[len(args)-1], e.Line, e.Msg)
 }
 
 //Stacktrace prints out the stacktrace of the error thrown
-func (err Exception) Stacktrace() string {
+func (e Exception) Stacktrace() string {
 	currentPkg := ""
 	i := 1
 	for {
@@ -62,15 +63,15 @@ func (err Exception) Stacktrace() string {
 		}
 
 		if pkg != currentPkg {
-			err.Stack += pkg
+			e.Stack += pkg
 			currentPkg = pkg
 		}
 
-		err.Stack += fmt.Sprintf("\n\t%s - %s(%d)", file, method, line)
-		err.Stack += "\n"
+		e.Stack += fmt.Sprintf("\n\t%s - %s(%d)", file, method, line)
+		e.Stack += "\n"
 
 		i++
 	}
 
-	return err.Stack
+	return e.Stack
 }

@@ -29,11 +29,18 @@ func main() {
     err := testFunction()
     if err != nil {
         println(err.Error())
-        //prints: ~/GO/src/test/test.go - main.testFunction(15): test error
     }
 }
 
 func testFunction() error {
 	  return exception.New("test error")
 }
+```
+
+# example
+
+Instead of the usual error message string, you will get this from the example error from above:
+
+```
+main.testFunction [test.go:15] - test error
 ```
