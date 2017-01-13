@@ -4,7 +4,8 @@
 [![Build Status](https://travis-ci.org/jonathankentstevens/errors.svg?branch=master)](https://travis-ci.org/jonathankentstevens/errors)
 
 # errors
-Custom error handler for Golang while keeping the standard for error handling
+
+Simple error handler implementation for GoLang while maintaining the idiomatic standard
 
 # implementation
 	go get github.com/jonathankentstevens/errors
@@ -12,7 +13,8 @@ Custom error handler for Golang while keeping the standard for error handling
 The new error package is called just the same as the standard library error package:
           
 	errors.New("test error")
-    
+	
+	
 # usage
 ```go
 package main
@@ -26,6 +28,8 @@ func main() {
     if err != nil {
         println(err.Error()) 
     }
+    
+    err = errors.Errorf("new %s error", 12345)
 }
 
 func testFunction() error {
