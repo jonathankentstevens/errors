@@ -7,10 +7,11 @@
 Custom error handler for Golang while keeping the standard for error handling
 
 # implementation
-    go get github.com/jonathankentstevens/errors
+	go get github.com/jonathankentstevens/errors
+	
 The new error package is called just the same as the standard library error package:
           
-     errors.New("test error")
+	errors.New("test error")
     
 # usage
 ```go
