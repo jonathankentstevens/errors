@@ -7,33 +7,28 @@
 Custom error handler for Golang while keeping the standard for error handling
 
 # implementation
-    go get github.com/jonathankentstevens/exception
-    
-The new exception package:
+    go get github.com/jonathankentstevens/errors
+The new error package is called just the same as the standard library error package:
           
-     exception.New("test error")
-    
-replaces the normal error package for initializing new error types:
-     
-     errors.New("test error")
-    
+     errors.New("test error")
+    
 # usage
 ```go
 package main
 
 import (
-	  "exception"
+	  "github.com/jonathankentstevens/errors"
 )
 
 func main() {
     err := testFunction()
     if err != nil {
-        println(err.Error())
-    }
+        println(err.Error()) 
+    }
 }
 
 func testFunction() error {
-	  return exception.New("test error")
+	  return errors.New("test error")
 }
 ```
 
