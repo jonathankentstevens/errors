@@ -1,9 +1,9 @@
 [![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
-[![Go Report Card](https://goreportcard.com/badge/github.com/jonathankentstevens/exception)](https://goreportcard.com/report/github.com/jonathankentstevens/exception)
-[![GoDoc](https://godoc.org/github.com/jonathankentstevens/exception?status.svg)](https://godoc.org/github.com/jonathankentstevens/exception)
-[![Build Status](https://travis-ci.org/jonathankentstevens/exception.svg?branch=master)](https://travis-ci.org/jonathankentstevens/exception)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jonathankentstevens/errors)](https://goreportcard.com/report/github.com/jonathankentstevens/errors)
+[![GoDoc](https://godoc.org/github.com/jonathankentstevens/errors?status.svg)](https://godoc.org/github.com/jonathankentstevens/errors)
+[![Build Status](https://travis-ci.org/jonathankentstevens/errors.svg?branch=master)](https://travis-ci.org/jonathankentstevens/errors)
 
-# exception
+# errors
 Custom error handler for Golang while keeping the standard for error handling
 
 # implementation
