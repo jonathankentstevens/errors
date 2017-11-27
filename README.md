@@ -1,14 +1,14 @@
 [![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
-[![Go Report Card](https://goreportcard.com/badge/github.com/jonathankentstevens/errors)](https://goreportcard.com/report/github.com/jonathankentstevens/errors)
-[![GoDoc](https://godoc.org/github.com/jonathankentstevens/errors?status.svg)](https://godoc.org/github.com/jonathankentstevens/errors)
-[![Build Status](https://travis-ci.org/jonathankentstevens/errors.svg?branch=master)](https://travis-ci.org/jonathankentstevens/errors)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jrkt/errors)](https://goreportcard.com/report/github.com/jrkt/errors)
+[![GoDoc](https://godoc.org/github.com/jrkt/errors?status.svg)](https://godoc.org/github.com/jrkt/errors)
+[![Build Status](https://travis-ci.org/jrkt/errors.svg?branch=master)](https://travis-ci.org/jrkt/errors)
 
 # errors
 
 Simple error handler implementation for GoLang while maintaining the idiomatic standard
 
 # implementation
-	go get github.com/jonathankentstevens/errors
+	go get github.com/jrkt/errors
 	
 The new error package is called just the same as the standard library error package:
           
@@ -20,7 +20,7 @@ The new error package is called just the same as the standard library error pack
 package main
 
 import (
-	  "github.com/jonathankentstevens/errors"
+	  "github.com/jrkt/errors"
 )
 
 func main() {
